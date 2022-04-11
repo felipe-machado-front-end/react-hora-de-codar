@@ -1,4 +1,5 @@
 import React from "react";
+import Challenge from "../2_EXERCICIO/Challenge";
 import { Events } from "./Events";
 import FirstComponent from "./FirstComponent";
 import TemplateExpression from "./TemplateExpression";
@@ -10,6 +11,7 @@ const UseComponents = () => {
       <FirstComponent />
       <TemplateExpression />
       <Events />
+      <Challenge />
     </div>
   );
 };
