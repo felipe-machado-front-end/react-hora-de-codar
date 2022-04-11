@@ -2,13 +2,9 @@ import React from "react";
 import "./App.css";
 
 const App = () => {
-  let meuNome = "Felipe";
-
   return (
     <div className="nome-destaque">
-      <p>
-        Prazer meu nome é <strong>{meuNome}</strong>
-      </p>
+      <h1>SEÇÃO 03 - Avançando React </h1>
     </div>
   );
 };
