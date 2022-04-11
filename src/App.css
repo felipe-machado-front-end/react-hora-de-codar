@@ -1,0 +1,11 @@
+.nome-destaque {
+  background-color: yellowgreen;
+  padding: 1rem;
+}
+.nome-destaque p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.nome-destaque p strong {
+  color: darkolivegreen;
+}
