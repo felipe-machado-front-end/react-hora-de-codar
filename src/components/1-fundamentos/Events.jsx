@@ -9,6 +9,12 @@ export const Events = () => {
       <div>
         <button onClick={handleMyEvent}>Clique aqui !</button>
       </div>
+
+      <div>
+        <button onClick={() => console.log("Clicou com arrow function")}>
+          Clique aqui 2
+        </button>
+      </div>
     </div>
   );
 };
