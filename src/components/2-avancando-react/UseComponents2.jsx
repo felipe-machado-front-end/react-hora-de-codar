@@ -1,4 +1,5 @@
 import React from "react";
+import CarDetails from "./CarDetails";
 import ConditionalRender from "./ConditionalRender";
 import ManageDate from "./ManageDate";
 import Photo from "./Photo";
@@ -13,7 +14,10 @@ export const UseComponents2 = () => {
       <ManageDate />
       <RenderList />
       <ConditionalRender />
+      {/* PROPS NORMAL */}
       <ShowUserName name="Felipe" />
+      {/* DECOMPOSIÇÃO DE PROPS*/}
+      <CarDetails brand="Ford" km={10000} color="Verde" />
     </div>
   );
 };
