@@ -3,6 +3,7 @@ import ConditionalRender from "./ConditionalRender";
 import ManageDate from "./ManageDate";
 import Photo from "./Photo";
 import RenderList from "./RenderList";
+import ShowUserName from "./ShowUserName";
 
 export const UseComponents2 = () => {
   return (
@@ -12,6 +13,7 @@ export const UseComponents2 = () => {
       <ManageDate />
       <RenderList />
       <ConditionalRender />
+      <ShowUserName name="Felipe" />
     </div>
   );
 };
