@@ -1,10 +1,12 @@
 import React from "react";
 import CarDetails from "./CarDetails";
 import { Carros } from "./CarrosData";
+import ChangeMessageState from "./ChangeMessageState";
 import ConditionalRender from "./ConditionalRender";
 import Container from "./Container";
 import ExecutarFuncao from "./ExecutarFuncao";
 import ManageDate from "./ManageDate";
+import Message from "./Message";
 import Photo from "./Photo";
 import RenderList from "./RenderList";
 import ShowUserName from "./ShowUserName";
@@ -13,6 +15,11 @@ export const UseComponents2 = () => {
   function showMessage() {
     alert("Executando do pai");
   }
+
+  const [message, setMessage] = React.useState("");
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
   return (
     <div>
       <h2>Componentes da seção 03 </h2>
@@ -37,6 +44,8 @@ export const UseComponents2 = () => {
         <p>Texto dentro do container</p>
       </Container>
       <ExecutarFuncao fn={showMessage} />
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 };
