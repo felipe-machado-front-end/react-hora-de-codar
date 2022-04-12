@@ -17,7 +17,9 @@ export const UseComponents2 = () => {
       {/* PROPS NORMAL */}
       <ShowUserName name="Felipe" />
       {/* DECOMPOSIÇÃO DE PROPS*/}
-      <CarDetails brand="Ford" km={10000} color="Verde" />
+      <CarDetails brand="Ford" km={0} cor="Verde" novo={true} />
+      <CarDetails brand="Gol" km={10000} cor="Azul" novo={false} />
+      <CarDetails brand="Palio" km={0} cor="Vermelho" novo={true} />
     </div>
   );
 };
