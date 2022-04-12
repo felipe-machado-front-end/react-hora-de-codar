@@ -2,12 +2,17 @@ import React from "react";
 import CarDetails from "./CarDetails";
 import { Carros } from "./CarrosData";
 import ConditionalRender from "./ConditionalRender";
+import Container from "./Container";
+import ExecutarFuncao from "./ExecutarFuncao";
 import ManageDate from "./ManageDate";
 import Photo from "./Photo";
 import RenderList from "./RenderList";
 import ShowUserName from "./ShowUserName";
 
 export const UseComponents2 = () => {
+  function showMessage() {
+    alert("Executando do pai");
+  }
   return (
     <div>
       <h2>Componentes da seção 03 </h2>
@@ -28,6 +33,10 @@ export const UseComponents2 = () => {
           <CarDetails key={id} brand={brand} km={km} cor={cor} novo={newCar} />
         ))}
       </div>
+      <Container>
+        <p>Texto dentro do container</p>
+      </Container>
+      <ExecutarFuncao fn={showMessage} />
     </div>
   );
 };
