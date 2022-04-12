@@ -1,5 +1,6 @@
 import React from "react";
 import CarDetails from "./CarDetails";
+import { Carros } from "./CarrosData";
 import ConditionalRender from "./ConditionalRender";
 import ManageDate from "./ManageDate";
 import Photo from "./Photo";
@@ -20,6 +21,13 @@ export const UseComponents2 = () => {
       <CarDetails brand="Ford" km={0} cor="Verde" novo={true} />
       <CarDetails brand="Gol" km={10000} cor="Azul" novo={false} />
       <CarDetails brand="Palio" km={0} cor="Vermelho" novo={true} />
+      <hr />
+      <div>
+        <h2>Lista renderizada por um array de dados</h2>
+        {Carros.map(({ id, brand, km, cor, newCar }) => (
+          <CarDetails key={id} brand={brand} km={km} cor={cor} novo={newCar} />
+        ))}
+      </div>
     </div>
   );
 };
