@@ -1,4 +1,5 @@
 import React from "react";
+import ManageDate from "./ManageDate";
 import Photo from "./Photo";
 
 export const UseComponents2 = () => {
@@ -6,6 +7,7 @@ export const UseComponents2 = () => {
     <div>
       <h2>Componentes da seção 03 </h2>
       <Photo />
+      <ManageDate />
     </div>
   );
 };
