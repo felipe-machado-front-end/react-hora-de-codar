@@ -1,4 +1,5 @@
 import React from "react";
+import ConditionalRender from "./ConditionalRender";
 import ManageDate from "./ManageDate";
 import Photo from "./Photo";
 import RenderList from "./RenderList";
@@ -10,6 +11,7 @@ export const UseComponents2 = () => {
       <Photo />
       <ManageDate />
       <RenderList />
+      <ConditionalRender />
     </div>
   );
 };
