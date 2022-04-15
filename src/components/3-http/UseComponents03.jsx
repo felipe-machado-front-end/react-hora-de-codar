@@ -1,9 +1,11 @@
 import React from "react";
+import ReqProduct from "./ReqProduct";
 
 const UseComponents03 = () => {
   return (
     <div>
-      <h1>SEÇÃO  Requisição</h1>
+      <h1>SEÇÃO Requisição</h1>
+      <ReqProduct />
     </div>
   );
 };
