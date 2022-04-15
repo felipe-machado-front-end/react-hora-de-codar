@@ -19,6 +19,26 @@
       "name": "manga",
       "price": "4",
       "id": 4
+    },
+    {
+      "name": "Sprint 02",
+      "price": "3",
+      "id": 5
+    },
+    {
+      "name": "Sprint 02",
+      "price": "3",
+      "id": 6
+    },
+    {
+      "name": "carniça",
+      "price": "2",
+      "id": 7
+    },
+    {
+      "name": "carniça",
+      "price": "2",
+      "id": 8
     }
   ]
 }

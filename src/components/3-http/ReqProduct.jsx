@@ -28,6 +28,10 @@ const ReqProduct = () => {
       },
       body: JSON.stringify(product),
     });
+    const addProduct = await res.json();
+    setProducts((preventProducts) => [...preventProducts, addProduct]);
+    setName("");
+    setPrice("");
   };
 
   return (
