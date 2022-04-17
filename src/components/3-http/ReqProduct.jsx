@@ -66,7 +66,8 @@ const ReqProduct = () => {
               onChange={(e) => setPrice(e.target.value)}
             />
           </label>
-          <input type="submit" value="Criar" />
+          {!loading && <input type="submit" value="Criar" />}
+          {loading && <input type="submit" value="Aguarde" />}
         </form>
       </div>
     </div>
