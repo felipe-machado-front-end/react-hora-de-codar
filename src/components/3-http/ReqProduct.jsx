@@ -6,7 +6,7 @@ const ReqProduct = () => {
   const url = "http://localhost:3000/products";
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-  const { data: items } = useFetch(url);
+  const { data: items, httpConfig } = useFetch(url);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -14,6 +14,7 @@ const ReqProduct = () => {
       name,
       price,
     };
+    /** 
     const res = await fetch(url, {
       method: "POST",
       headers: {
@@ -23,6 +24,10 @@ const ReqProduct = () => {
     });
     const addProduct = await res.json();
     setProducts((preventProducts) => [...preventProducts, addProduct]);
+    
+    */
+
+    httpConfig(product, "POST");
     setName("");
     setPrice("");
   };
