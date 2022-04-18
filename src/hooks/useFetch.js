@@ -9,44 +9,67 @@ export const useFetch = (url) => {
   //loading
   const [loading, setLoading] = useState(false);
 
+  //tratamento de error
+  const [error, setError] = useState(null);
+
+  const [itemId, setItemId] = useState(null);
+
   const httpConfig = (data, method) => {
     if (method === "POST") {
       setConfig({
-        method: "POST",
+        method,
         headers: {
           "Content-type": "application/json",
         },
         body: JSON.stringify(data),
       });
+      setMethod(method);
+    } else if (method === "DELETE") {
+      setConfig({
+        method,
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
 
       setMethod(method);
+      setItemId(data);
     }
   };
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await fetch(url);
-      const json = await res.json();
+      try {
+        const res = await fetch(url);
+        const json = await res.json();
 
-      setData(json);
-
+        setData(json);
+      } catch (error) {
+        setError(`ERRO = ${error.message}`);
+      }
       setLoading(false);
     };
     fetchData();
   }, [url, callFetch]);
 
   useEffect(() => {
+    let json;
     const htpRequest = async () => {
       if (method === "POST") {
         let fetchOptions = [url, config];
         const res = await fetch(...fetchOptions);
-        const json = await res.json();
+        json = await res.json();
         setCallFecth(json);
+      } else if (method === "DELETE") {
+        const deleteUrl = `${url}/${itemId}`;
+        const res = await fetch(deleteUrl, config);
+        json = await res.json();
       }
+      setCallFecth(json);
     };
     htpRequest();
   }, [config, method, url]);
 
-  return { data, httpConfig, loading };
+  return { data, httpConfig, loading, error };
 };
