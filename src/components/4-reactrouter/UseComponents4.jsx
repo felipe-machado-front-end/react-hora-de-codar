@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import About from "../../pages/About";
 import Home from "../../pages/Home";
 import Info from "../../pages/Info";
@@ -22,6 +22,7 @@ const UseComponents4 = () => {
           <Route path="/products/:id" element={<Product />}></Route>
           <Route path="/products/:id/info" element={<Info />}></Route>
           <Route path="/search" element={<Search />}></Route>
+          <Route path="/company" element={<Navigate to="/about" />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
