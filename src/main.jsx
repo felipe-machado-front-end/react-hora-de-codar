@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import UseComponents4 from "./components/4-reactrouter/UseComponents4";
+import UseComponents5 from "./components/5-context/UseComponents5";
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseComponents4 />
+    <UseComponents5 />
   </React.StrictMode>,
   document.getElementById("root")
 );
